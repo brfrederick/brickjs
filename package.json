@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "express": "^4.13.3",
+    "express-enrouten": "^1.2.1",
     "jade": "^1.11.0",
     "mongoose": "^4.1.11"
   }
