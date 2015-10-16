@@ -16,14 +16,15 @@ var router_options = {
 
 
 // initialize router
-app.use(
-  router(router_options)
-);
+app.use( router(router_options) );
 
 // serve static files
-app.use(
-  '/assets', express.static(path.resolve(__dirname + '/assets/'))
-);
+app.use( '/assets', express.static(path.resolve(__dirname + '/assets/')) );
+
+// handle 404
+app.use('/*', function (req, res) {
+  res.render('util/404');
+});
 
 // View engine - jade/dust
 app.set('views', path.join(__dirname, 'views'));
@@ -36,5 +37,6 @@ app.listen(port, function(error){
     throw error;
   }
 
+  // Server is running.  Celebrate!
   console.log('Listening on port ' + port);
 });
