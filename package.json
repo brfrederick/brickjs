@@ -1,0 +1,32 @@
+{
+  "name": "brickjs",
+  "version": "0.0.1",
+  "description": "My take on a server side express framework",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "pretest": "jshint ./src",
+    "test": "echo \"tests complete\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brfrederick/brickjs.git"
+  },
+  "author": "Braxton Frederick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brfrederick/brickjs/issues"
+  },
+  "homepage": "https://github.com/brfrederick/brickjs#readme",
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "mongoose": "^4.1.11"
+  }
+}
