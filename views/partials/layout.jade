@@ -1,6 +1,16 @@
+block variables
+- var showDrawer = (hasDrawer == "true" ? "mdl-layout--fixed-drawer" : " ")
 doctype html
 html
   include ./header.jade
   body
-    block content
-    include ./footer.jade
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header(class = showDrawer || "awflknf")
+      include ./topbar.jade
+      block drawer
+        include ./sidebar.jade
+      .mdl-layout__content
+        block content
+        include ./footer.jade
+  block scripts
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js")
