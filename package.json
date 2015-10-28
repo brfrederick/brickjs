@@ -25,9 +25,16 @@
     "jshint": "^2.8.0"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "compression": "^1.6.0",
+    "connect-redis": "^3.0.1",
+    "cookie-parser": "^1.4.0",
+    "csurf": "^1.8.3",
     "express": "^4.13.3",
     "express-enrouten": "^1.2.1",
+    "express-session": "^1.12.0",
     "jade": "^1.11.0",
-    "mongoose": "^4.1.11"
+    "mongoose": "^4.1.11",
+    "underscore": "^1.8.3"
   }
 }
