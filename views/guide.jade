@@ -1,0 +1,35 @@
+extends ./partials/layout.jade
+
+block variables
+  - var hasDrawer = "false"
+
+block append style
+  link(rel='stylesheet', type="text/css", href='/assets/styles/guide/guide.css')
+
+block title
+  title Guide
+
+block content
+  .app-content
+    .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+      .mdl-tabs__tab-bar
+        a(href='#input-panel').mdl-tabs__tab.is-active Entry
+        a(href='#dictonary-panel').mdl-tabs__tab Concepts
+      .mdl-tabs__panel.is-active#input-panel
+        .guide-input--wrapper
+          form(action='#')
+            div
+            // Concept or term
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              textarea#term.mdl-textfield__input(type='text', rows='3')
+              label.mdl-textfield__label(for='term') Term
+            // Concept description
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              textarea#description.mdl-textfield__input(type='text', rows='3')
+              label.mdl-textfield__label(for='description') Description
+            div
+            button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab.guide-input-submit(type='submit')
+              i.material-icons add
+      .mdl-tabs__panel#dictonary-panel
+        .guide-dictonary--wrapper
+          include ./dictonary.jade

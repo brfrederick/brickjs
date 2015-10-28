@@ -1,8 +1,9 @@
 header.mdl-layout__header
   .mdl-layout__header-row
     .mdl-layout-spacer
-    .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable.mdl-textfield--floating-label.mdl-textfield--align-right
-      label.mdl-button.mdl-js-button.mdl-button--icon(for='fixed-header-drawer-exp')
-        i.material-icons search
-      .mdl-textfield__expandable-holder
-        input#fixed-header-drawer-exp.mdl-textfield__input(type='text', name='search')
+    button#user-menu.mdl-button.mdl-js-button.mdl-button--icon
+      i.material-icons more_vert
+    ul(for='user-menu').mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect
+      li.mdl-menu__item Profile
+      li.mdl-menu__item Settings
+      li.mdl-menu__item Logout
